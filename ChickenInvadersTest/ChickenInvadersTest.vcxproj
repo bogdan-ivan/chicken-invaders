@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{FCD22411-82CE-4AFE-9551-95AE149C1028}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ChickenInvadersTest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectSubType>NativeUnitTestProject</ProjectSubType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML 2.5.1\include;$(SolutionDir)Chicken Invaders;$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;SFML_STATIC;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;(%AdditionalLibraryDirectories);$(SolutionDir)SFML 2.5.1\lib;$(SolutionDir)Chicken Invaders\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)Chicken Invaders\Debug\Player.obj;$(SolutionDir)Chicken Invaders\Debug\Entity.obj;$(SolutionDir)Chicken Invaders\Debug\Weapon.obj;$(SolutionDir)Chicken Invaders\Debug\Enemy.obj;$(SolutionDir)Chicken Invaders\Debug\Level.obj;$(SolutionDir)Chicken Invaders\Debug\Projectile.obj;$(SolutionDir)Chicken Invaders\Debug\Wave.obj;$(SolutionDir)Chicken Invaders\Debug\Score.obj;$(SolutionDir)Chicken Invaders\Debug\LevelManager.obj;$(SolutionDir)Chicken Invaders\Debug\Animation.obj;$(SolutionDir)Chicken Invaders\Debug\Engine.obj;$(SolutionDir)Chicken Invaders\Debug\PulseGun.obj;$(SolutionDir)Chicken Invaders\Debug\PlasmaGun.obj;$(SolutionDir)Chicken Invaders\Debug\UtensilGun.obj;$(SolutionDir)Chicken Invaders\Debug\NeutronGun.obj;$(SolutionDir)Chicken Invaders\Debug\HyperGun.obj;$(SolutionDir)Chicken Invaders\Debug\TextureCache.obj;$(SolutionDir)Chicken Invaders\Debug\AudioCache.obj;$(SolutionDir)Chicken Invaders\Debug\State.obj;C:\FACULTATE\Anul 2\Semestrul 1\Programare Avansata in C++\Chicken-Invaders\Chicken Invaders\Debug\Player.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;(%AdditionalLibraryDirectories);..\ProiectPAC\chicken-invaders\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)Chicken Invaders\Debug\Player.obj;$(SolutionDir)Chicken Invaders\Debug\Entity.obj;$(SolutionDir)Chicken Invaders\Debug\Weapon.obj;$(SolutionDir)Chicken Invaders\Debug\Enemy.obj;$(SolutionDir)Chicken Invaders\Debug\Level.obj;$(SolutionDir)Chicken Invaders\Debug\Projectile.obj;$(SolutionDir)Chicken Invaders\Debug\Wave.obj;$(SolutionDir)Chicken Invaders\Debug\Score.obj;$(SolutionDir)Chicken Invaders\Debug\LevelManager.obj;$(SolutionDir)Chicken Invaders\Debug\Animation.obj;$(SolutionDir)Chicken Invaders\Debug\Engine.obj;$(SolutionDir)Chicken Invaders\Debug\PulseGun.obj;$(SolutionDir)Chicken Invaders\Debug\PlasmaGun.obj;$(SolutionDir)Chicken Invaders\Debug\UtensilGun.obj;$(SolutionDir)Chicken Invaders\Debug\NeutronGun.obj;$(SolutionDir)Chicken Invaders\Debug\HyperGun.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML 2.5.1\include;$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;SFML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;(%AdditionalLibraryDirectories);D:\Univer anul II\ProiectPAC\chicken-invaders\SFML 2.5.1\lib;$(SolutionDir)build\obj\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)Chicken Invaders\Debug\Player.obj;$(SolutionDir)Chicken Invaders\Debug\Entity.obj;$(SolutionDir)Chicken Invaders\Debug\Weapon.obj;$(SolutionDir)Chicken Invaders\Debug\Enemy.obj;$(SolutionDir)Chicken Invaders\Debug\Level.obj;$(SolutionDir)Chicken Invaders\Debug\Projectile.obj;$(SolutionDir)Chicken Invaders\Debug\Wave.obj;$(SolutionDir)Chicken Invaders\Debug\Score.obj;$(SolutionDir)Chicken Invaders\Debug\LevelManager.obj;$(SolutionDir)Chicken Invaders\Debug\Animation.obj;$(SolutionDir)Chicken Invaders\Debug\Engine.obj;$(SolutionDir)Chicken Invaders\Debug\PulseGun.obj;$(SolutionDir)Chicken Invaders\Debug\PlasmaGun.obj;$(SolutionDir)Chicken Invaders\Debug\UtensilGun.obj;$(SolutionDir)Chicken Invaders\Debug\NeutronGun.obj;$(SolutionDir)Chicken Invaders\Debug\HyperGun.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UseFullPaths>true</UseFullPaths>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;(%AdditionalLibraryDirectories);..\ProiectPAC\chicken-invaders\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(SolutionDir)Chicken Invaders\Debug\Player.obj;$(SolutionDir)Chicken Invaders\Debug\Entity.obj;$(SolutionDir)Chicken Invaders\Debug\Weapon.obj;$(SolutionDir)Chicken Invaders\Debug\Enemy.obj;$(SolutionDir)Chicken Invaders\Debug\Level.obj;$(SolutionDir)Chicken Invaders\Debug\Projectile.obj;$(SolutionDir)Chicken Invaders\Debug\Wave.obj;$(SolutionDir)Chicken Invaders\Debug\Score.obj;$(SolutionDir)Chicken Invaders\Debug\LevelManager.obj;$(SolutionDir)Chicken Invaders\Debug\Animation.obj;$(SolutionDir)Chicken Invaders\Debug\Engine.obj;$(SolutionDir)Chicken Invaders\Debug\PulseGun.obj;$(SolutionDir)Chicken Invaders\Debug\PlasmaGun.obj;$(SolutionDir)Chicken Invaders\Debug\UtensilGun.obj;$(SolutionDir)Chicken Invaders\Debug\NeutronGun.obj;$(SolutionDir)Chicken Invaders\Debug\HyperGun.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ChickenInvadersTest.cpp" />
+    <ClCompile Include="EnemyTest.cpp" />
+    <ClCompile Include="GameDifficultyTest.cpp" />
+    <ClCompile Include="LevelManagerTest.cpp" />
+    <ClCompile Include="LevelTest.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PlayerTest.cpp" />
+    <ClCompile Include="ProjectileTest.cpp" />
+    <ClCompile Include="ScoreTest.cpp" />
+    <ClCompile Include="WaveTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chicken Invaders\Chicken Invaders.vcxproj">
+      <Project>{9780b7bc-3626-4c94-8b85-f6084ec32817}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
